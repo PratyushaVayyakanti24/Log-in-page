@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>
+            loginForm
+        </title>
+        <style>
+     *{       
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    background-image: url("https://img.freepik.com/premium-vector/abstract-dark-blue-gradient-circles-background-vector-illustration_518299-622.jpg?size=626&ext=jpg&ga=GA1.1.408731893.1706699452&semt=ais");
+
+}
+#content{
+    height: 350px;
+    width: 350px;
+    /* background-color:#d94a80; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap:10px;
+    border-color: aliceblue;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius:50%;
+
+    padding-bottom:50px ;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: x-large;
+
+
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+    color: azure;
+}
+.field input{
+    width: 100%;
+    outline:none;
+    border: 2px solid red;
+    padding: 15px;
+    border-radius: 5%;
+}
+button{ border: none;
+    outline: none;
+    width: 50%;
+    background-color:#070c52;
+    padding: 15px;
+    color: aliceblue;
+    font-size: x-large;
+
+
+}
+h1{
+    
+    position: absolute; 
+        top: 10%; 
+        text-align: center;
+        width: 100%; 
+        padding: 50px 0; 
+        
+        color:red; }
+      img{
+        width: 100%;
+        height: 100vh;
+      }
+      button:hover{
+        color: cyan;
+        background-color: cadetblue;
+        
+      }
+      a{
+        font-size: larger;
+        color: bisque;
+    
+      }
+     a:hover{
+        color: darkmagenta;
+     }
+  </style>
+    </head>
+    <body>
+        <h1> LOGINPAGE</h1>    
+        <div id="content">
+
+          <div class="field"><label id="usname">Username:</label>
+            <input type="text" id="name" required autofocus minlength="8"></div>
+            <div class="field"><label id="paswd">Password:</label>
+            <input type="password" id="pass" required minlength="8"  spellcheck="true" ></div>
+            <button type="button" onclick="authentication()">Log in</button>
+            </div>
+    <a href="#">forgot your password </a>
+
+    <script>
+        const usname = [
+            { username: "pratyusha", password: "pratyu" },
+            { username: "ashok", password: "ashok123" }
+        ];
+
+        function authentication() {
+            var username = document.getElementById("name").value;
+            var paswd = document.getElementById("pass").value;
+            var isAuthenticated = false;
+
+            for (var i = 0; i < usname.length; i++) {
+                if (usname[i].username == username && usname[i].password == paswd) {
+                    isAuthenticated = true;
+                    alert("Login successful!");
+                    break;
+                }
+            }
+
+            if (!isAuthenticated) {
+                alert("Incorrect username or password!");
+            }
+        }
+    </script>
+</body>
+
+        
+
+</html
+
+        
